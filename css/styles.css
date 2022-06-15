@@ -1,67 +1,172 @@
-/* Цвет всех заголовков  #212121 */
-/* Основной цвет текста #757575 */
-/* Второстепенный цвет текста #FFFFFF */
-/* mailto и tel #FFFFFF 60 % */
-/* Осноной цвет фона  #E5E5E5; */
-/* Второстепенный цвет фона #F5F4FA */
-/* Контрасный цвет фона #2F303A */
-/* Акцент #2196F3; */
+:root {
+/* Основной цвет текста */
+   --primary-text-color: #757575;
+/* Цвет всех заголовков */
+   --title-text-color: #212121;
+/* Контрасный цвет фона */
+   --bgc-color: #2F303A;
+   /* Акцент, выделения */
+   --accent-color: #2196F3;
+}
 
  body {
-    background: #E5E5E5;
- }
+   color: var(--primary-text-color);
+   background: #FFFFFF;
+   font-family: 'Roboto', sans-serif;
+   letter-spacing: 0.03em;
+   font-weight: 700;
+}
  ul {
      list-style: none;
  }
 
  /* Header */
+/* .header {
+   width: 1600px;
+   height: 80px;
+} */
 
- .logo {
-    color: #212121;
- }
- .logo-accent {
-    color: #2196F3;
- }
-
- .site-nav .link {
-    color: #212121;
- }
-.site-nav .link:hover,
-.site-nav .link:focus
- {
-    color: #2196F3;
+/* Logo */
+.logo {
+   font-family: 'Raleway';
+   font-size: 26px;
+   line-height: 1.2;
+   color: #000000;
+   text-decoration: none;
 }
- .contact .link {
-    color: #757575;
- }
- .contact .link:hover,
- .contact .link:focus {
-    color: #2196F3;
- }
+.logo-accent {
+   color: var(--accent-color);
+   text-decoration: none;
+}
 
- /* Main */
+/* Site-nav */
+ .link {
+   color: var(--title-text-color);
+   font-weight: 500;
+   font-size: 14px;
+   font-style: normal;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   text-decoration: none;
+}
+.nav-list .link.current,
+.nav-list .link:hover,
+.nav-list .link:focus {
+   color: var(--accent-color);  
+}
+/* Contact-nav  */
+.contact-list .link {
+   color: var(--primary-text-color);
+}
+.contact-list .link:hover,
+.contact-list .link:focus {
+   color: var(--accent-color);
+}
 
- /* Hero */
+/* Hero */
  .hero {
-    background: #2F303A;
- }
+   background-color: var(--bgc-color);
+ 
+}
  .hero-title {
-    color: #FFFFFF;
- }
+   font-weight: 900;
+   font-size: 44px;
+   line-height: 1.36; 
+   text-align: center;
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+   color: #FFFFFF;
+}
+.hero-btn {
+   background-color: var(--accent-color);
+   font-family: inherit;
+   color: #FFFFFF;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.87;
+   letter-spacing: 0.06em;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   border-color: transparent;
+   width: 200px;
+   height: 50px;
+   }
+.hero-btn:hover,
+.hero-btn:focus {
+   background-color: var(--accent-color);
+}
 
- /* Section */
+/* Features */
+.features-title {
+ display: none;
+}
+.features-subtitle {
+   font-size: 14px;
+   line-height: 1.14;
+   text-transform: uppercase;
+   color: var(--title-text-color);
+}
+.features-text {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.71;
+}
 
- .section-title {
-    color: #212121;
- }
+/* Work & Team Title */
+.work-title, 
+.team-title {
+   font-size: 36px;
+   line-height: 1.17;
+   text-align: center;
+   letter-spacing: 0.03em;
+   color: var(--title-text-color);
+}
 
- .features .features-title {
-    color: #212121;
- }
- .features .features-text {
-    color: #757575;
- }
-
- .section-team {
-    background: #F5F4FA;
- }
+/* Team */
+.section-team {
+   background: #F5F4FA;
+}
+.card {
+   width: 270px;
+   height: 368px;
+   background: #FFFFFF;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 0px 0px 4px 4px;
+}
+.team-subtitle {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+      text-align: center;
+      color: var(--title-text-color);
+}
+.team-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.19;
+      text-align: center;
+}
+/* Footer */
+.footer {
+   background-color: var(--bgc-color);
+}
+.contact-list .map {
+   color: #FFFFFF;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.71;
+}
+.contact-list .flink {
+   color: rgba(255, 255, 255, 0.6); 
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.71;
+  
+}
+.logo-footer {
+ font-family: 'Raleway';
+ font-size: 26px;
+ line-height: 1.2;
+ color: #ffffff;
+ text-decoration: none;
+}
